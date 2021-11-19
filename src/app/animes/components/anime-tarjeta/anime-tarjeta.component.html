@@ -1,8 +1,8 @@
 
 <mat-card>
     <mat-card-header>
-        <mat-card-title> {{ anime.jap_name }} </mat-card-title>
-        <mat-card-subtitle> {{ anime.name }} </mat-card-subtitle>
+        <mat-card-title> {{ anime.name }} </mat-card-title>
+        <mat-card-subtitle> {{ anime.jap_name }} </mat-card-subtitle>
     </mat-card-header>
 
     <img mat-card-image [src]="anime | imagen">
@@ -15,7 +15,6 @@
             <strong>Estudio: </strong> {{ anime.studio }}
             <br>
             <strong>Puntuación: </strong> {{ anime.rating }}
-            <br>
         </p>
     </mat-card-content>
 

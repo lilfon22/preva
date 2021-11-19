@@ -22,14 +22,14 @@ export class LoginComponent{
         console.log(resp);
 
         if ( resp.id ) {
-          this.router.navigate(['./heroes']);
+          this.router.navigate(['./animes']);
         }
       })
   }
 
   ingresarSinLogin() {
     this.authService.logout();
-    this.router.navigate(['./heroes']);
+    this.router.navigate(['./animes']);
   }
 
 }

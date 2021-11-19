@@ -30,11 +30,11 @@ export class AnimesService {
     return this.http.post<Anime>(`${ this.baseUrl }/animes`, anime );
   }
 
-  actualizarHeroe( heroe: Anime ): Observable<Anime> {
-    return this.http.put<Anime>(`${ this.baseUrl }/animes/${ heroe.id }`, anime );
+  actualizarAnime( anime: Anime ): Observable<Anime> {
+    return this.http.put<Anime>(`${ this.baseUrl }/animes/${ anime.id }`, anime );
   }
 
-  borrarHeroe( id: string ): Observable<any> {
+  borrarAnime( id: string ): Observable<any> {
     return this.http.delete<any>(`${ this.baseUrl }/animes/${ id }`);
   }
 

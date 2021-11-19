@@ -5,13 +5,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 
 import { Anime } from '../../interfaces/animes.interface';
-import { HeroesService } from '../../services/heroes.service';
 import { ConfirmarComponent } from '../../components/confirmar/confirmar.component';
 import { AnimesService } from '../../services/animes.service';
 
 @Component({
-  selector: 'app-agregar',
-  templateUrl: './agregar.component.html',
+  selector: 'app-subir',
+  templateUrl: './subir.component.html',
   styles: [`
     img {
       width: 100%;
@@ -19,11 +18,12 @@ import { AnimesService } from '../../services/animes.service';
     }
   `]
 })
-export class AgregarComponent implements OnInit {
+export class SubirComponent implements OnInit {
 
 
   anime: Anime = {
     name: '',
+    jap_name: '',
     description: '',
     rating: (0-10),
     episodes: (0-999),
@@ -47,46 +47,46 @@ export class AgregarComponent implements OnInit {
       .pipe(
         switchMap( ({id}) => this.animesService.getAnimePorId( id ) )
       )
-      .subscribe( heroe => this.anime = anime );
+      .subscribe( anime => this.anime = anime );
 
   }
 
   guardar() {
     
-    if( this.anime.superhero.trim().length === 0  ) {
+    if( this.anime.name.trim().length === 0  ) {
       return;
     }
 
-    if ( this.heroe.id ) {
+    if ( this.anime.id ) {
       // Actualizar
-      this.heroesService.actualizarHeroe( this.heroe )
-        .subscribe( heroe => this.mostrarSnakbar('Registro actualizado'));
+      this.animesService.actualizarAnime( this.anime )
+        .subscribe( anime => this.mostrarSnakbar('Registro actualizado'));
 
     } else {
       // Crear
-      this.heroesService.agregarHeroe( this.heroe )
-        .subscribe( heroe => {
-          this.router.navigate(['/heroes/editar', heroe.id ]);
+      this.animesService.agregarAnime( this.anime )
+        .subscribe( anime => {
+          this.router.navigate(['/animes/editar', anime.id ]);
           this.mostrarSnakbar('Registro creado');
         })
     }
 
   }
 
-  borrarHeroe() {
+  borrarAnime() {
 
     const dialog = this.dialog.open( ConfirmarComponent, {
       width: '250px',
-      data: this.heroe
+      data: this.anime
     });
 
     dialog.afterClosed().subscribe(
       (result) => {
 
         if( result ) {
-          this.heroesService.borrarHeroe( this.heroe.id! )
+          this.animesService.borrarAnime( this.anime.id! )
             .subscribe( resp => {
-              this.router.navigate(['/heroes']);
+              this.router.navigate(['/animes']);
             });
         }
         

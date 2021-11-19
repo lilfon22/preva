@@ -12,6 +12,8 @@ import { AnimeComponent } from './pages/anime/anime.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { AnimeTarjetaComponent } from './components/anime-tarjeta/anime-tarjeta.component';
+import { ImagenPipe } from './pipes/imagen.pipe';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { AnimeTarjetaComponent } from './components/anime-tarjeta/anime-tarjeta.
     AnimeComponent,
     HomeComponent,
     ListadoComponent,
-    AnimeTarjetaComponent
+    AnimeTarjetaComponent,
+    ImagenPipe,
+    ConfirmarComponent
   ],
   imports: [
     CommonModule,
@@ -31,4 +35,4 @@ import { AnimeTarjetaComponent } from './components/anime-tarjeta/anime-tarjeta.
     AnimesRoutingModule
   ]
 })
-export class HeroesModule { }
+export class AnimesModule { }
