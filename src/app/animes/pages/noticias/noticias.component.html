@@ -1,1 +1,15 @@
-<p>noticias works!</p>
+<h1>Últimas noticias</h1>
+<br>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px">
+
+    <div fxFlex="20"
+         fxFlex.lg="15"
+         fxFlex.sm="30"
+         *ngFor="let noticia of noticias">
+       
+    </div>
+</div>

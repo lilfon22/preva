@@ -13,22 +13,22 @@
          fxLayoutGap="30px">
 
          <div fxFlex="50">
-             <h1>{{ anime.name }} <small>- {{ anime.jap_name }} </small> </h1>
+             <h1>{{ anime.name }} <small>- {{ anime.jap_name }} </small></h1>
              <mat-divider></mat-divider>
              <br>
              <img [src]="anime | imagen">
          </div>
 
          <div fxFlex="50">
-             <h1>{{ anime.studio }}</h1>
+             <h1>Ficha técnica</h1>
              <mat-divider></mat-divider>
-
+             <br>
              <mat-list>
-                 <mat-list-item> {{ anime.studio }} </mat-list-item>
-                 <mat-list-item> {{ anime.episodes }} </mat-list-item>
-                 <mat-list-item> {{ anime.rating }} </mat-list-item>
-                 <mat-list-item> {{ anime.studio }} </mat-list-item>
-                 <mat-list-item> {{ anime.jap_name }} </mat-list-item>
+                 <mat-list-item> - {{ anime.description }} </mat-list-item>
+                 <mat-list-item> - {{ anime.episodes }} </mat-list-item>
+                 <mat-list-item> - {{ anime.categorie }} </mat-list-item>
+                 <mat-list-item> - {{ anime.studio }} </mat-list-item>
+                 <mat-list-item> - {{ anime.rating }} </mat-list-item>
              </mat-list>
 
              <br>

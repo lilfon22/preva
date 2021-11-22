@@ -8,9 +8,12 @@
     <img mat-card-image [src]="anime | imagen">
 
     <mat-card-content>
-        <h3>{{ anime.description }}</h3>
         <p>
+            <strong>Breve descripción: </strong> {{ anime.breve }}
+            <br>
             <strong>Episodios: </strong> {{ anime.episodes }}
+            <br>
+            <strong>Categoría: </strong> {{ anime.categorie }}
             <br>
             <strong>Estudio: </strong> {{ anime.studio }}
             <br>
@@ -27,7 +30,7 @@
 
         <button mat-button 
                 color="info"
-                [routerLink]="['/anime/editar', anime.id ]">
+                [routerLink]="['/animes/editar', anime.id ]">
             Editar
         </button>
     </mat-card-actions>

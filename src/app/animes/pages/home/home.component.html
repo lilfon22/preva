@@ -22,7 +22,14 @@
                 <span>Listado de Animes</span>
             </a>
 
-            <a routerLink="./agregar"
+            <a routerLink="./noticias"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>info</mat-icon>
+                <span>Últimas noticias</span>
+            </a>
+
+            <a routerLink="./subir"
                mat-list-item
                (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>add</mat-icon>
@@ -34,6 +41,13 @@
                (click)="sidenav.toggle()">
                 <mat-icon mat-list-icon>search</mat-icon>
                 <span>Buscar Anime</span>
+            </a>
+
+            <a routerLink="./foro"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon>perm_identity</mat-icon>
+                <span>Foro</span>
             </a>
             
         </mat-nav-list>

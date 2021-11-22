@@ -32,10 +32,18 @@
 
 
         <mat-form-field>
+            <mat-label>Breve Descripción</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="anime.breve"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
             <mat-label>Descripción</mat-label>
             <input matInput
                    type="text"
-                   [(ngModel)]="anime.episodes"
+                   [(ngModel)]="anime.description"
                    required>
         </mat-form-field>
 
@@ -48,9 +56,17 @@
         </mat-form-field>
 
         <mat-form-field>
+            <mat-label>Categorías</mat-label>
+            <input matInput
+                   type="string"
+                   [(ngModel)]="anime.categorie"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
             <mat-label>Estudio</mat-label>
             <input matInput
-                   type="number"
+                   type="string"
                    [(ngModel)]="anime.studio"
                    required>
         </mat-form-field>

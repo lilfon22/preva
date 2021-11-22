@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { Anime } from '../interfaces/animes.interface';
+import { Anime, Noticias } from '../interfaces/animes.interface';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
@@ -36,6 +36,10 @@ export class AnimesService {
 
   borrarAnime( id: string ): Observable<any> {
     return this.http.delete<any>(`${ this.baseUrl }/animes/${ id }`);
+  }
+
+  getNoticias(): Observable<Noticias[]> {
+    return this.http.get<Noticias[]>(`${ this.baseUrl }/noticias`);
   }
 
 }
