@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Auth } from '../../interfaces/auth.interface';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -8,7 +9,14 @@ import { AuthService } from '../../services/auth.service';
   styles: [
   ]
 })
-export class LoginComponent{
+export class LoginComponent {
+
+   auth: Auth = {
+    id: '',
+    email: '',
+    usuario: '',
+    password: '',
+}
 
   constructor( private router: Router,
                private authService: AuthService ) { }

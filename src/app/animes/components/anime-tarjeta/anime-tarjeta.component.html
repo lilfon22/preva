@@ -33,6 +33,12 @@
                 [routerLink]="['/animes/editar', anime.id ]">
             Editar
         </button>
+
+        <button mat-mini-fab
+                color="warn"
+                (click)="guardar()">
+                <mat-icon>favorite</mat-icon>
+        </button>
     </mat-card-actions>
 
 </mat-card>

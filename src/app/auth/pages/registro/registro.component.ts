@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Auth } from '../../interfaces/auth.interface';
 
 @Component({
   selector: 'app-registro',
@@ -7,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class RegistroComponent implements OnInit {
+
+  auth: Auth = {
+    id: '',
+    email: '',
+    usuario: '',
+    password: '',
+  }
 
   constructor() { }
 

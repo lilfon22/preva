@@ -7,6 +7,8 @@ import { AnimeComponent } from './pages/anime/anime.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
+import { FavoritosComponent } from './pages/favoritos/favoritos.component';
+import { ForoComponent } from './pages/foro/foro.component';
 
 const rutas: Routes = [
   {
@@ -19,6 +21,8 @@ const rutas: Routes = [
       { path: 'buscar', component: BuscarComponent },
       { path: ':id', component: AnimeComponent },
       { path: 'noticias', component: NoticiasComponent },
+      { path: 'favoritos', component: FavoritosComponent },
+      { path: 'foro', component: ForoComponent },
       { path: '**', redirectTo: 'listado' }
     ]
   }
