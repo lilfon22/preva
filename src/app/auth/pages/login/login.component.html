@@ -1,3 +1,37 @@
+<h1 >
+    Introduce tus datos
+</h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+    <div fxFlex="50" fxLayout="column">
+        
+<div fxLayout="row" 
+fxLayout.xs="column" 
+fxLayoutGap="20px"
+fxLayoutAlign="start center">
+<mat-form-field fxFlex="100" fxLayout.xs="column" fxLayoutAlign="start center" >
+   <mat-label>Usuario</mat-label>
+   <input matInput
+          type="text"
+          [(ngModel)]="auth.usuario"
+          required>
+</mat-form-field>
+
+<div fxLayout="row" 
+fxLayoutAlign="start center"
+fxLayout.xs="column" 
+fxLayoutGap="20px">
+<mat-form-field fxFlex="100" fxLayout.xs="column" fxLayoutAlign="start center" >
+   <mat-label>Contraseña</mat-label>
+   <input matInput
+          type="password"
+          [(ngModel)]="auth.password"
+          required>
+</mat-form-field>
+</div>
 
 <mat-grid-list cols="1">
     <mat-grid-tile>
@@ -15,4 +49,7 @@
         </button>
     </mat-grid-tile>
 </mat-grid-list>
+
+    </div>
+</div>
 

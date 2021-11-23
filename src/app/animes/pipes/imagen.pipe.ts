@@ -14,7 +14,7 @@ export class ImagenPipe implements PipeTransform {
     } else if ( anime.img ) {
       return anime.img;
     } else {
-      return `assets/heroes/${ anime.id }.jpg`;
+      return `assets/imagenes/${ anime.id }.jpg`;
     }
 
 

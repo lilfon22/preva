@@ -25,10 +25,13 @@ export class SubirComponent implements OnInit {
     name: '',
     jap_name: '',
     description: '',
-    rating: (0-10),
-    episodes: (0-999),
+    categorie: '',
+    breve: '',
+    rating: (0),
+    episodes: (0),
     studio: '',
     img: '',
+    wtw: ''
   }
 
   constructor( private animesService: AnimesService,
