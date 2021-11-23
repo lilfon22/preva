@@ -42,6 +42,8 @@ export class AnimesService {
     return this.http.get<Noticias[]>(`${ this.baseUrl }/noticias`);
   }
 
+  añadirFavorito()
+
 }
 function anime<T>(arg0: string, anime: any): Observable<Anime> {
   throw new Error('Function not implemented.');
