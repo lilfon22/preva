@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Anime } from '../../interfaces/animes.interface';
@@ -15,33 +15,16 @@ import { AnimesService } from '../../services/animes.service';
 })
 export class AnimeTarjetaComponent{
 
-  constructor( private animesService: AnimesService,
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private snackBar: MatSnackBar) { }
-
   @Input() anime!: Anime;
+  @Output() disparadorDeFav = new EventEmitter<Anime>();
 
-  guardar() {
-    
-    if( this.anime.name.trim().length === 0  ) {
-      return;
-    }
+  constructor( private animesService: AnimesService) { }
 
-    if ( this.anime.id ) {
-      // Actualizar
-      this.animesService.actualizarAnime( this.anime )
-        .subscribe( anime => this.mostrarSnakbar('Este anime ha sido'));
-    }
-
-  }
-
-  mostrarSnakbar( mensaje: string ) {
-
-    this.snackBar.open( mensaje, 'añadido a favoritos', {
-      duration: 2500
+  agregarFavorito() {
+    this.animesService.disparadorDeFav.emit({        
+      anime:this.anime
     });
-
   }
 
-}
+} 
+

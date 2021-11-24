@@ -1,16 +1,18 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Anime, Noticias } from '../interfaces/animes.interface';
 import { environment } from '../../../environments/environment';
-
 @Injectable({
   providedIn: 'root'
 })
 export class AnimesService {
 
+
+
   private baseUrl: string = environment.baseUrl;
+  public disparadorDeFav: any;
 
   constructor( private http: HttpClient ) { }
 
@@ -41,8 +43,6 @@ export class AnimesService {
   getNoticias(): Observable<Noticias[]> {
     return this.http.get<Noticias[]>(`${ this.baseUrl }/noticias`);
   }
-
-  añadirFavorito()
 
 }
 function anime<T>(arg0: string, anime: any): Observable<Anime> {

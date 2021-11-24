@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Favorito } from '../../interfaces/animes.interface';
+import { Component, Input, OnInit } from '@angular/core';
+import { Anime } from '../../interfaces/animes.interface';
+import { AnimesService } from '../../services/animes.service';
 
 @Component({
   selector: 'app-favoritos',
@@ -9,11 +10,17 @@ import { Favorito } from '../../interfaces/animes.interface';
 })
 export class FavoritosComponent implements OnInit {
 
-  favorito: Favorito[] = []
+  @Input() anime!: Anime;
 
-  constructor() { }
+  constructor(public animesService: AnimesService) { }
 
   ngOnInit(): void {
+  }
+
+  agregarFavorito() {
+    this.animesService.disparadorDeFav.emit({        
+      anime:this.anime
+    });
   }
 
 }

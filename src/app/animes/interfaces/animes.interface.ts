@@ -20,17 +20,3 @@ export interface Noticias {
     noticia: string;
     img?: string;
 }
-
-export interface Favorito {
-    id?: string;
-    name: string;
-    jap_name: string;
-    breve: string;
-    description: string;
-    rating: number;
-    episodes: number;
-    studio: string;
-    categorie: string;
-    wtw: string;
-    img?: string;
-}
