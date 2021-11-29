@@ -7,20 +7,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
-import { MenuComponent } from './shared/menu/menu.component';
-
+import { MenuModule } from './shared/menu/menu.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorPageComponent,
-    MenuComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

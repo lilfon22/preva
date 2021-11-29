@@ -15,7 +15,8 @@ import { AnimeTarjetaComponent } from './components/anime-tarjeta/anime-tarjeta.
 import { ImagenPipe } from './pipes/imagen.pipe';
 import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
-
+import { MenuComponent } from '../shared/menu/menu.component';
+import { MenuModule } from '../shared/menu/menu.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FavoritosComponent } from './pages/favoritos/favoritos.component';
     FlexLayoutModule,
     FormsModule,
     MaterialModule,
-    AnimesRoutingModule
+    AnimesRoutingModule,
+    MenuModule
   ]
 })
 export class AnimesModule { }
