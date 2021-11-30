@@ -13,8 +13,12 @@ import { AuthService } from 'src/app/auth/services/auth.service';
 })
 export class MenuComponent implements OnInit {
 
-  constructor( private router: Router,
-    private authService: AuthService ) { }
+  get auth() {
+    return this.authService.auth;
+  }
+
+  constructor(  private router: Router,
+                private authService: AuthService ) { }
 
   ngOnInit(): void {
   }

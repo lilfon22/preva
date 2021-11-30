@@ -58,14 +58,70 @@
         </mat-nav-list>
         
     </mat-sidenav>
+    
 
     <mat-toolbar>
+        
         <button mat-icon-button
                 (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
 
         <span class="spacer"></span>
+
+        <div>
+            <button mat-button>
+                <span>Home</span>
+              </button>
+          
+              <button mat-button [matMenuTriggerFor]="categorias">
+                <span>Categorías</span>
+              </button>
+              <mat-menu #categorias="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Drama</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>whatshot</mat-icon>
+                  <span>Comedia</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Aventura</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Shounen</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Romance</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Terror</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Misterio</span>
+                </button>
+              </mat-menu>
+        
+              <button mat-button>
+                <span>Novedades</span>
+              </button>
+        
+              <button mat-button>
+                <span>Tus favoritos</span>
+              </button>   
+        
+              <button mat-button>
+                <span>Foro</span>
+              </button>
+            </div>
+            <span class="fill-remaining-space"></span>
+
 
         <span>{{ auth.usuario }} </span>
 
