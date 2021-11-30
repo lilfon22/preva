@@ -5,17 +5,24 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item>
           <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>whatshot</mat-icon>
-          <span>Favoritos</span>
+          <span>Listado</span>
         </button>
         <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+          <mat-icon>add</mat-icon>
+          <span>Añadir anime</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>search</mat-icon>
+          <span>Buscar anime</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>person</mat-icon>
+          <span>Mi cuenta</span>
         </button>
       </mat-menu>
+      <span class="fill-remaining-space"></span>
+
+    <div>
   
       <button mat-button>
         <span>Home</span>
@@ -56,17 +63,23 @@
       </mat-menu>
 
       <button mat-button>
-        <span>Favoritos</span>
-      </button>
-
-      <button mat-button>
         <span>Novedades</span>
       </button>
 
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+      <button mat-button>
+        <span>Tus favoritos</span>
+      </button>   
+
+      <button mat-button>
+        <span>Foro</span>
+      </button>
+    </div>
+      <span class="fill-remaining-space"></span>
+      
+
+      <button mat-button
+      (click)="logout()">
+  Logout
+</button>
 </mat-toolbar>
+

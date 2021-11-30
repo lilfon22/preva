@@ -8,6 +8,7 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { MenuModule } from './shared/menu/menu.module';
+
 @NgModule({
   declarations: [
     AppComponent,
