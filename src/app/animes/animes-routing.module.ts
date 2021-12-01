@@ -5,10 +5,10 @@ import { SubirComponent } from './pages/subir/subir.component';
 import { BuscarComponent } from './pages/buscar/buscar.component';
 import { AnimeComponent } from './pages/anime/anime.component';
 import { ListadoComponent } from './pages/listado/listado.component';
-import { HomeComponent } from './pages/home/home.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 import { ForoComponent } from './pages/foro/foro.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const rutas: Routes = [
   {
