@@ -16,8 +16,8 @@
             <a routerLink="./listado"
                mat-list-item
                (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>label</mat-icon>
-                <span>Listado de Animes</span>
+                <mat-icon mat-list-icon>list</mat-icon>
+                <span>Listado</span>
             </a>
 
             <a routerLink="./favoritos"
@@ -74,39 +74,9 @@
                 <span>Home</span>
               </button>
           
-              <button mat-button [matMenuTriggerFor]="categorias">
+              <button mat-button>
                 <span>Categorías</span>
               </button>
-              <mat-menu #categorias="matMenu">
-                <button mat-menu-item>
-                  <mat-icon>dialpad</mat-icon>
-                  <span>Drama</span>
-                </button>
-                <button mat-menu-item disabled>
-                  <mat-icon>whatshot</mat-icon>
-                  <span>Comedia</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Aventura</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Shounen</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Romance</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Terror</span>
-                </button>
-                <button mat-menu-item>
-                  <mat-icon>notifications_off</mat-icon>
-                  <span>Misterio</span>
-                </button>
-              </mat-menu>
         
               <button mat-button>
                 <span>Novedades</span>

@@ -8,6 +8,8 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material/material.module';
 import { HomeModule } from './animes/pages/home/home.module';
+import { MenuModule } from './shared/menu/menu.module';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,8 @@ import { HomeModule } from './animes/pages/home/home.module';
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
-    HomeModule
+    HomeModule,
+    MenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

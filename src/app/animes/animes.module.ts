@@ -15,6 +15,7 @@ import { ImagenPipe } from './pipes/imagen.pipe';
 import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
 import { HomeModule } from './pages/home/home.module';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HomeModule } from './pages/home/home.module';
     AnimeTarjetaComponent,
     ImagenPipe,
     ConfirmarComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    CategoriasComponent
   ],
   imports: [
     CommonModule,
